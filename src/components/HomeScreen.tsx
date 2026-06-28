@@ -21,12 +21,12 @@ export const HomeScreen: React.FC<HomeScreenProps> = ({
   onPromptReset,
 }) => {
   const hasHistory = answeredCount > 0;
-  const [imgSrc, setImgSrc] = useState("/brand/madrasati-logo.jpg");
+  const [imgSrc, setImgSrc] = useState("./brand/madrasati-logo.jpg");
   const [useFallbackText, setUseFallbackText] = useState(false);
 
   const handleImgError = () => {
-    if (imgSrc === "/brand/madrasati-logo.jpg") {
-      setImgSrc("/brand/madrasati-logo.png");
+    if (imgSrc === "./brand/madrasati-logo.jpg") {
+      setImgSrc("./brand/madrasati-logo.png");
     } else {
       setUseFallbackText(true);
     }
